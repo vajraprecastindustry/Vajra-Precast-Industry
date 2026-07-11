@@ -39,6 +39,8 @@
             color: var(--text-dark);
             background-color: var(--bg-light);
             overflow-x: hidden;
+            /* Prevents text highlighting on double-tap for a better app-like feel */
+            -webkit-tap-highlight-color: transparent; 
         }
 
         h1, h2, h3, h4 {
@@ -89,7 +91,7 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
-            height: 110px; /* Increased to fit prominent square logo */
+            height: 110px;
             padding: 0 20px;
         }
 
@@ -99,7 +101,7 @@
         }
 
         .logo img {
-            height: 90px; /* Larger, prominent square logo size */
+            height: 90px;
             width: auto;
             object-fit: contain;
         }
@@ -143,13 +145,13 @@
             position: relative;
             background: linear-gradient(135deg, rgba(11, 57, 106, 0.95), rgba(105, 120, 135, 0.9)), url('data:image/svg+xml,%3Csvg width="60" height="60" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg"%3E%3Cg fill="none" fill-rule="evenodd"%3E%3Cg fill="%23ffffff" fill-opacity="0.05"%3E%3Cpath d="M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z"/%3E%3C/g%3E%3C/g%3E%3C/svg%3E');
             color: var(--text-light);
-            padding-top: 110px; /* Offset for larger header */
+            padding-top: 110px; 
         }
 
         .hero-content {
             z-index: 2;
             padding: 20px;
-            max-width: 900px; /* Slightly wider to fit the longer title well */
+            max-width: 900px;
         }
 
         .hero h1 {
@@ -163,7 +165,7 @@
         .hero h1 span {
             color: #fff;
             text-shadow: 0px 0px 15px rgba(255, 255, 255, 0.5);
-            display: block; /* Drops the company name to its own line for impact */
+            display: block; 
             margin-top: 10px;
         }
 
@@ -255,9 +257,9 @@
             position: relative;
             overflow: hidden;
             z-index: 1;
+            cursor: pointer; /* Indicates it's tappable */
         }
 
-        /* Dynamic Hover Effect for Cards */
         .product-card::before {
             content: "";
             position: absolute;
@@ -272,19 +274,20 @@
             transition: transform 0.5s ease;
         }
 
-        .product-card:hover {
+        /* Dynamic Effect for both PC Hover and Mobile Tap (.active-tap) */
+        .product-card:hover, .product-card.active-tap {
             transform: translateY(-10px);
             border-bottom: 5px solid var(--accent-grey);
             box-shadow: 0 20px 40px rgba(0,0,0,0.1);
         }
 
-        .product-card:hover::before {
+        .product-card:hover::before, .product-card.active-tap::before {
             transform: scaleY(1);
         }
 
-        .product-card:hover h3, 
-        .product-card:hover p, 
-        .product-card:hover .icon i {
+        .product-card:hover h3, .product-card.active-tap h3, 
+        .product-card:hover p, .product-card.active-tap p, 
+        .product-card:hover .icon i, .product-card.active-tap .icon i {
             color: var(--text-light);
         }
 
@@ -408,11 +411,11 @@
         /* --- Mobile Responsiveness --- */
         @media screen and (max-width: 768px) {
             .nav-container {
-                height: 90px; /* Adjusted header size for mobile */
+                height: 90px;
             }
 
             .logo img {
-                height: 70px; /* Scaled square logo for mobile */
+                height: 70px;
             }
 
             .hamburger {
@@ -445,7 +448,7 @@
             }
 
             .hero h1 {
-                font-size: 1.8rem; /* Scaled down perfectly for the long text */
+                font-size: 1.8rem;
             }
 
             .hero p {
@@ -535,6 +538,18 @@
                 </div>
 
                 <div class="product-card">
+                    <div class="icon"><i class="fas fa-th-large"></i></div>
+                    <h3>Chequered Floor Tiles</h3>
+                    <p>Our absolute specialty. These heavy-duty, anti-skid tiles provide unmatched durability and grip, making them perfect for parking lots, walkways, terraces, and high-traffic public areas.</p>
+                </div>
+
+                <div class="product-card">
+                    <div class="icon"><i class="fas fa-home"></i></div>
+                    <h3>Heat-Resistant Roof Tiles</h3>
+                    <p>Designed to keep your interiors cool. Our compressed concrete roof tiles provide superior thermal insulation against the scorching heat, ensuring comfort and long-term energy efficiency.</p>
+                </div>
+
+                <div class="product-card">
                     <div class="icon"><i class="fas fa-road"></i></div>
                     <h3>Curb & Edging Stones</h3>
                     <p>Crucial for road infrastructure and landscaping. Our curb stones neatly separate pavements from roads and garden beds, preventing the lateral movement of installed paver blocks.</p>
@@ -603,6 +618,7 @@
     </a>
 
     <script>
+        // Mobile Menu Logic
         const hamburger = document.getElementById('hamburger');
         const navLinks = document.getElementById('nav-links');
         const links = document.querySelectorAll('.nav-links a');
@@ -619,6 +635,22 @@
             link.addEventListener('click', () => {
                 navLinks.classList.remove('active');
                 hamburger.innerHTML = '<i class="fas fa-bars"></i>';
+            });
+        });
+
+        // Mobile Tap-to-Blue Product Card Logic
+        const productCards = document.querySelectorAll('.product-card');
+        
+        productCards.forEach(card => {
+            card.addEventListener('click', function() {
+                // Remove the blue class from all other cards so only one stays active at a time
+                productCards.forEach(c => {
+                    if (c !== this) {
+                        c.classList.remove('active-tap');
+                    }
+                });
+                // Toggle the blue state on the card that was just tapped
+                this.classList.toggle('active-tap');
             });
         });
     </script>
