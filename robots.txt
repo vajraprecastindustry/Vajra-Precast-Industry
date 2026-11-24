@@ -1,0 +1,6 @@
+# Robots.txt for Vajra Precast Industry (GitHub Pages)
+User-agent: *
+Allow: /
+
+# Sitemap Index
+Sitemap: https://vajraprecastindustry.github.io/Vajra-Precast-Industry/sitemap.xml
