@@ -744,22 +744,22 @@
         }
 
         .btn-explain {
-            background-color: #FFFFFF;
-            color: var(--primary-blue-dark);
-            border-color: #FFFFFF;
-            box-shadow: 0 8px 20px rgba(255, 255, 255, 0.25);
+            background: linear-gradient(135deg, #14532D 0%, #166534 100%);
+            color: #FFFFFF;
+            border: 1.5px solid #22C55E;
+            box-shadow: 0 8px 20px rgba(20, 83, 45, 0.35);
             font-weight: 800;
         }
 
         .btn-explain:hover {
-            background-color: #F8FAFC;
-            color: var(--primary-blue);
+            background: linear-gradient(135deg, #166534 0%, #15803D 100%);
+            color: #FFFFFF;
             transform: translateY(-2px);
-            box-shadow: 0 12px 25px rgba(255, 255, 255, 0.4);
+            box-shadow: 0 12px 25px rgba(22, 101, 52, 0.45);
         }
 
         .btn-explain i {
-            color: #E11D48;
+            color: #86EFAC;
         }
 
         .btn-whatsapp {
@@ -1072,6 +1072,32 @@
             color: var(--text-muted);
         }
 
+        
+        .consultation-actions {
+            display: flex;
+            gap: 10px;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        .consultation-actions .btn {
+            font-size: 0.82rem;
+            padding: 10px 16px;
+            max-width: 100%;
+            box-sizing: border-box;
+            white-space: normal;
+            line-height: 1.35;
+            text-align: center;
+        }
+
+        @media (max-width: 768px) {
+            .consultation-actions .btn {
+                font-size: 0.78rem;
+                padding: 10px 12px;
+                width: 100%;
+            }
+        }
+
         /* Consultation Callout Banner */
         .consultation-banner {
             background: linear-gradient(135deg, #072545 0%, #0b396a 100%);
@@ -1112,9 +1138,34 @@
 
         .consultation-actions {
             display: flex;
-            gap: 12px;
-            flex-wrap: wrap;
-            justify-content: center;
+            gap: 10px;
+            flex-direction: column;
+            align-items: stretch;
+            min-width: 250px;
+            max-width: 100%;
+            box-sizing: border-box;
+        }
+
+        .consultation-banner .consultation-actions .btn {
+            font-size: 0.82rem;
+            padding: 10px 16px;
+            white-space: normal;
+            line-height: 1.35;
+            text-align: center;
+            box-sizing: border-box;
+            width: 100%;
+        }
+
+        @media (max-width: 768px) {
+            .consultation-actions {
+                width: 100%;
+                min-width: 0;
+            }
+            .consultation-banner .consultation-actions .btn {
+                font-size: 0.76rem;
+                padding: 10px 12px;
+                width: 100%;
+            }
         }
 
         /* --- About Section --- */
@@ -1692,15 +1743,15 @@
         }
 
         .mobile-action-btn.explain-btn {
-            color: #DC2626;
+            color: #14532D;
         }
 
         .mobile-action-btn.wa-btn {
             color: var(--whatsapp-green);
         }
 
-        .mobile-action-btn.li-btn {
-            color: var(--linkedin-blue);
+        .mobile-action-btn.google-btn {
+            color: #EA4335;
         }
 
         .mobile-action-btn.erp-btn {
@@ -1764,24 +1815,30 @@
         /* --- Mobile-Optimized Product Chips Carousel (< 768px) --- */
         @media (max-width: 768px) {
             .paver-product-selector {
-                overflow-x: auto;
-                flex-wrap: nowrap;
-                -webkit-overflow-scrolling: touch;
-                padding: 2px 2px 8px;
-                scrollbar-width: none;
-                gap: 8px;
-            }
-            .paver-product-selector::-webkit-scrollbar {
-                display: none;
+                display: grid;
+                grid-template-columns: repeat(2, 1fr);
+                gap: 6px;
+                width: 100%;
+                overflow-x: visible;
+                flex-wrap: wrap;
+                padding: 0;
             }
             .product-nav-btn {
-                flex-shrink: 0;
-                font-size: 0.74rem;
-                padding: 6px 12px;
-                white-space: nowrap;
+                width: 100%;
+                font-size: 0.72rem;
+                padding: 8px 6px;
+                justify-content: center;
+                text-align: center;
+                border-radius: 8px;
+                white-space: normal;
+                min-height: 38px;
+                line-height: 1.25;
             }
             .paver-theme-label {
-                display: none;
+                grid-column: span 2;
+                text-align: center;
+                margin-bottom: 2px;
+                font-size: 0.76rem;
             }
             .svg-canvas-container {
                 min-height: auto;
@@ -1802,6 +1859,13 @@
             .demand-chips-grid {
                 grid-template-columns: repeat(2, 1fr);
                 gap: 8px;
+            }
+        }
+
+        
+        @media (max-width: 768px) {
+            #wave-control-wrap {
+                display: none !important;
             }
         }
 
@@ -2165,7 +2229,7 @@
                     <!-- "Design as per demand" Custom Showcase Card (Visible when "More..." clicked) -->
                     <div class="demand-showcase-card" id="demand-card">
                         <div class="demand-badge">
-                            <i class="fas fa-drafting-compass"></i> <span data-i18n="demand_badge">Bespoke Manufacturing</span>
+                            <i class="fas fa-drafting-compass"></i> <span data-i18n="demand_badge">Custom Manufacturing</span>
                         </div>
                         <h2 data-i18n="demand_title">Design as per demand</h2>
                         <p data-i18n="demand_desc">
@@ -2247,9 +2311,9 @@
                 <!-- Consultation Callout Banner -->
                 <div class="consultation-banner">
                     <div class="consultation-text">
-                        <h3 data-i18n="consult_title">Need Custom Products, Colors or Thicknesses?</h3>
+                        <h3 data-i18n="consult_title">Need Custom Products, Colours or Thicknesses?</h3>
                         <p data-i18n="consult_desc">
-                            Vajra Precast is 100% flexible. We engineer custom molds, special tactile warning tiles for public transit, and bespoke colors using genuine Tata Pigments T-130. Speak directly with our factory engineer.
+                            Vajra Precast is 100% flexible. We engineer custom molds, special tactile warning tiles for public transit, and custom colours using genuine Tata Pigments T-130. Speak directly with our factory engineer.
                         </p>
                         <div class="consultation-gstin-badge">
                             <i class="fas fa-certificate"></i> <span data-i18n="consult_gstin">Official GSTIN: 10ABCFV4645B1ZP • 100% Tax Compliant B2B & PWD Supply</span>
@@ -2257,7 +2321,7 @@
                     </div>
                     <div class="consultation-actions">
                         <a href="tel:+916206164368" class="btn btn-explain">
-                            <i class="fas fa-phone-volume"></i> <span data-i18n="consult_btn_explain">Explain Me Over a Call (+91 62061 64368)</span>
+                            <i class="fas fa-phone-volume"></i> <span data-i18n="consult_btn_explain">Explain Over a Call (+91 62061 64368)</span>
                         </a>
                         <a href="https://wa.me/916206164368?text=Hello%20Vajra%20Precast%2C%20I%20need%20expert%20consultation%20for%20my%20paving%20project." target="_blank" class="btn btn-whatsapp">
                             <i class="fab fa-whatsapp"></i> <span data-i18n="consult_btn_wa">Get Instant Rates on WhatsApp</span>
@@ -2282,11 +2346,11 @@
                 </p>
                 <div class="about-highlight-box">
                     <p data-i18n="about_callout">
-                        Direct Factory Procurement — No Middlemen, No Hidden Dealer Markups. Delivered straight from our Sampatchak factory to your construction site across Bihar.
+                        Direct Factory Procurement - No Middlemen, No Hidden Dealer Markups. Delivered straight from our Sampatchak factory to your construction site across Bihar.
                     </p>
                 </div>
                 <p data-i18n="about_p2">
-                    Our manufacturing process leverages advanced <strong>High-Frequency Mold & Table Vibration Compaction</strong> paired with continuous <strong>Deep Water Immersion Curing</strong> in dedicated curing tanks. Squeezing out trapped micro-voids and achieving complete hydration, our concrete achieves impenetrable structural density with compressive strength exceeding 50 MPa.
+                    Our manufacturing process uses advanced <strong>High-Frequency Mold & Table Vibration Compaction</strong> paired with continuous <strong>Water Incubation Curing</strong> in dedicated curing tanks. Squeezing out trapped micro-voids and achieving complete hydration, our concrete achieves impenetrable structural density with compressive strength exceeding 50 MPa.
                 </p>
             </div>
 
@@ -2322,7 +2386,7 @@
                 <span class="section-badge" data-i18n="prod_badge">Product Catalog</span>
                 <h2 class="section-title" data-i18n="prod_title">Precast Concrete & Tile Range</h2>
                 <p class="section-subtitle" data-i18n="prod_subtitle">
-                    Manufactured with 53-grade OPC cement, hard basalt aggregates, authentic Tata T-130 pigments, and continuous deep-water immersion curing. Custom designs and colors available on demand.
+                    Manufactured with 53-grade OPC cement, hard basalt aggregates, authentic Tata T-130 pigments, and continuous water incubation curing. Custom designs and colours available on demand.
                 </p>
             </div>
 
@@ -2460,11 +2524,11 @@
                     <p data-i18n="why_card2_desc">We exclusively utilize certified Tata T-130 synthetic iron oxide pigments. 100% UV-resistant and permanent, ensuring colors never fade under rain or intense sun.</p>
                 </div>
 
-                <!-- Pillar 3: Continuous Deep Water Immersion Curing -->
+                <!-- Pillar 3: Continuous Water Incubation Curing -->
                 <div class="why-card">
                     <div class="why-card-icon"><i class="fas fa-water"></i></div>
-                    <h4 data-i18n="why_card3_title">Continuous Deep Water Immersion Curing</h4>
-                    <p data-i18n="why_card3_desc">All precast units undergo uninterrupted full submersion in automated factory curing tanks, achieving complete hydration crystallization with zero thermal micro-cracks.</p>
+                    <h4 data-i18n="why_card3_title">Continuous Water Incubation Curing</h4>
+                    <p data-i18n="why_card3_desc">All precast units undergo uninterrupted water incubation in automated factory curing tanks, achieving complete hydration crystallization with zero thermal micro-cracks.</p>
                 </div>
 
                 <!-- Pillar 4: Open 24x7 with On-Site Staff Always -->
@@ -2624,13 +2688,13 @@
             <i class="fab fa-whatsapp"></i>
             <span data-i18n="mob_wa">WhatsApp</span>
         </a>
-        <a href="https://www.linkedin.com/company/vajraprecastindustry" target="_blank" rel="noopener noreferrer" class="mobile-action-btn li-btn">
-            <i class="fab fa-linkedin"></i>
-            <span data-i18n="mob_li">LinkedIn</span>
+        <a href="https://share.google/hUYS0YOORTFmH1Z55" target="_blank" rel="noopener noreferrer" class="mobile-action-btn google-btn" title="View Vajra Precast on Google">
+            <i class="fab fa-google"></i>
+            <span data-i18n="mob_google">Google</span>
         </a>
-        <a href="https://vajra-precast-erp.pages.dev/login" target="_blank" rel="noopener noreferrer" class="mobile-action-btn erp-btn">
+        <a href="https://vajra-precast-erp.pages.dev/login" target="_blank" rel="noopener noreferrer" class="mobile-action-btn erp-btn" title="Vajra ERP Employee Login">
             <i class="fas fa-user-lock"></i>
-            <span data-i18n="mob_erp">ERP Login</span>
+            <span data-i18n="mob_employee">Employee</span>
         </a>
     </div>
 
@@ -2818,7 +2882,7 @@
 
             // Demand Card
             "demand_badge": {
-                "en": "Bespoke Manufacturing",
+                "en": "Custom Manufacturing",
                 "hi": "विशेष मांग अनुसार निर्माण"
             },
             "demand_title": {
@@ -2864,15 +2928,15 @@
 
             // Consultation Banner
             "consult_title": {
-                "en": "Need Custom Products, Colors or Thicknesses?",
+                "en": "Need Custom Products, Colours or Thicknesses?",
                 "hi": "क्या आपको कस्टम उत्पाद, विशेष रंग या नाप चाहिए?"
             },
             "consult_desc": {
-                "en": "Vajra Precast is 100% flexible. We engineer custom molds, special tactile warning tiles for public transit, and bespoke colors using genuine Tata Pigments T-130. Speak directly with our factory engineer.",
+                "en": "Vajra Precast is 100% flexible. We engineer custom molds, special tactile warning tiles for public transit, and custom colours using genuine Tata Pigments T-130. Speak directly with our factory engineer.",
                 "hi": "वज्र प्रीकास्ट पूरी तरह लचीला है। हम कस्टम मोल्ड, मेट्रो/एयरपोर्ट के लिए टेक्टाइल टाइलें और ओरिजिनल टाटा T-130 पिगमेंट द्वारा विशेष रंग तैयार करते हैं। मुख्य इंजीनियर से सीधे समझें।"
             },
             "consult_btn_explain": {
-                "en": "Explain Me Over a Call (+91 62061 64368)",
+                "en": "Explain Over a Call (+91 62061 64368)",
                 "hi": "फ़ोन पर पूरी बात समझें (+91 62061 64368)"
             },
             "consult_btn_wa": {
@@ -2888,11 +2952,11 @@
                 "hi": "<strong>वज्र प्रीकास्ट इंडस्ट्री</strong> पटना-गया हाईवे पर फतेहपुर, संपतचक, बिहार स्थित एक आधुनिक प्रीकास्ट कंक्रीट निर्माण इकाई है। 15+ वर्षों के अनुभव के साथ हमारा कारखाना <strong>24 घंटे, सातों दिन (365 दिन) खुला</strong> रहता है और साइट पर हमेशा स्टाफ मौजूद रहता है।"
             },
             "about_callout": {
-                "en": "Direct Factory Procurement — No Middlemen, No Hidden Dealer Markups. Delivered straight from our Sampatchak factory to your construction site across Bihar.",
-                "hi": "सीधे फैक्ट्री से खरीद — कोई बिचौलिया या डीलर कमीशन नहीं। सीधे हमारे कारखाने से आपकी निर्माण साइट तक सुरक्षित आपूर्ति।"
+                "en": "Direct Factory Procurement - No Middlemen, No Hidden Dealer Markups. Delivered straight from our Sampatchak factory to your construction site across Bihar.",
+                "hi": "सीधे फैक्ट्री से खरीद: कोई बिचौलिया या डीलर कमीशन नहीं। सीधे हमारे कारखाने से आपकी निर्माण साइट तक सुरक्षित आपूर्ति।"
             },
             "about_p2": {
-                "en": "Our manufacturing process leverages advanced <strong>High-Frequency Mold & Table Vibration Compaction</strong> paired with continuous <strong>Deep Water Immersion Curing</strong> in dedicated curing tanks. Squeezing out trapped micro-voids and achieving complete hydration, our concrete achieves impenetrable structural density with compressive strength exceeding 50 MPa.",
+                "en": "Our manufacturing process uses advanced <strong>High-Frequency Mold & Table Vibration Compaction</strong> paired with continuous <strong>Water Incubation Curing</strong> in dedicated curing tanks. Squeezing out trapped micro-voids and achieving complete hydration, our concrete achieves impenetrable structural density with compressive strength exceeding 50 MPa.",
                 "hi": "हमारी निर्माण प्रक्रिया में उन्नत <strong>हाई-फ्रीक्वेंसी वाइब्रेशन कॉम्पैक्शन</strong> और समर्पित कुंडों में निरंतर <strong>जल कुंड तराई (क्योरिंग)</strong> की जाती है। हवा के सूक्ष्म छिद्रों को पूरी तरह समाप्त कर 50+ MPa से अधिक की अटूट मजबूती हासिल की जाती है।"
             },
             "stat_exp_num": { "en": "15+", "hi": "15+" },
@@ -2908,7 +2972,7 @@
             "prod_badge": { "en": "Product Catalog", "hi": "उत्पाद सूची" },
             "prod_title": { "en": "Precast Concrete & Tile Range", "hi": "उच्च शक्ति प्रीकास्ट कंक्रीट एवं टाइलें" },
             "prod_subtitle": {
-                "en": "Manufactured with 53-grade OPC cement, hard basalt aggregates, authentic Tata T-130 pigments, and continuous deep-water immersion curing. Custom designs and colors available on demand.",
+                "en": "Manufactured with 53-grade OPC cement, hard basalt aggregates, authentic Tata T-130 pigments, and continuous water incubation curing. Custom designs and colours available on demand.",
                 "hi": "53 ग्रेड सीमेंट, कठोर गिट्टी, ओरिजिनल टाटा T-130 पिगमेंट और जल कुंड तराई द्वारा निर्मित। मांग अनुसार विशेष डिजाइन और रंग भी उपलब्ध।"
             },
 
@@ -2994,10 +3058,10 @@
                 "en": "We exclusively utilize certified Tata T-130 synthetic iron oxide pigments. 100% UV-resistant and permanent, ensuring colors never fade under rain or intense sun.",
                 "hi": "हम केवल प्रमाणित टाटा T-130 सिंथेटिक आयरन ऑक्साइड पिगमेंट का उपयोग करते हैं। यह 100% यूवी-प्रतिरोधी है और बरसात या धूप में कभी फीका नहीं पड़ता।"
             },
-            "why_card3_title": { "en": "Continuous Deep Water Immersion Curing", "hi": "वैज्ञानिक जल कुंड तराई (क्योरिंग)" },
+            "why_card3_title": { "en": "Continuous Water Incubation Curing", "hi": "सतत जल इनक्यूबेशन क्योरिंग" },
             "why_card3_desc": {
-                "en": "All precast units undergo uninterrupted full submersion in automated factory curing tanks, achieving complete hydration crystallization with zero thermal micro-cracks.",
-                "hi": "सभी उत्पाद कारखाने के वाटर क्योरिंग कुंडों में लगातार पूर्ण जलमग्न रहकर तराई प्राप्त करते हैं, जिससे रासायनिक मजबूती 100% परिपक्व होती है और दरारें नहीं आतीं।"
+                "en": "All precast units undergo uninterrupted water incubation in automated factory curing tanks, achieving complete hydration crystallization with zero thermal micro-cracks.",
+                "hi": "सभी उत्पाद कारखाने के वाटर क्योरिंग कुंडों में लगातार जल इनक्यूबेशन द्वारा तराई प्राप्त करते हैं, जिससे रासायनिक मजबूती 100% परिपक्व होती है और दरारें नहीं आतीं।"
             },
             "why_card4_title": { "en": "Open 24x7 • Staff On-Site Always", "hi": "24x7 खुला • हर समय स्टाफ मौजूद" },
             "why_card4_desc": {
@@ -3067,8 +3131,8 @@
             "mob_call": { "en": "Support", "hi": "सपोर्ट" },
             "mob_explain": { "en": "Explain", "hi": "फ़ोन पर समझें" },
             "mob_wa": { "en": "WhatsApp", "hi": "व्हाट्सएप" },
-            "mob_li": { "en": "LinkedIn", "hi": "लिंक्डइन" },
-            "mob_erp": { "en": "ERP Login", "hi": "ईआरपी" }
+            "mob_google": { "en": "Google", "hi": "गूगल" },
+            "mob_employee": { "en": "Employee", "hi": "कर्मचारी" }
         };
 
         let currentLanguage = localStorage.getItem('vajra_site_lang') || 'en';
@@ -3667,8 +3731,8 @@
                     body.innerHTML = `
                         <p>हमारे निर्मित प्रीकास्ट उत्पाद भारतीय राष्ट्रीय निर्माण मानकों के पूर्णतः अनुरूप हैं:</p>
                         <ul style="margin-left: 20px; margin-top: 10px; margin-bottom: 10px;">
-                            <li><strong>GSTIN (बिहार सरकार एवं वाणिज्यिक कर पंजीकृत):</strong> 10ABCFV4645B1ZP — 100% कर अनुपालन बी2बी इनवॉइसिंग।</li>
-                            <li><strong>IS 15658:2006:</strong> पेविंग के लिए प्रीकास्ट कंक्रीट ब्लॉक — सटीक आकार, संपीड़न शक्ति रेटिंग (M30 से M50), और घर्षण प्रतिरोध।</li>
+                            <li><strong>GSTIN (बिहार सरकार एवं वाणिज्यिक कर पंजीकृत):</strong> 10ABCFV4645B1ZP: 100% कर अनुपालन बी2बी इनवॉइसिंग।</li>
+                            <li><strong>IS 15658:2006:</strong> पेविंग के लिए प्रीकास्ट कंक्रीट ब्लॉक: सटीक आकार, संपीड़न शक्ति रेटिंग (M30 से M50), और घर्षण प्रतिरोध।</li>
                             <li><strong>IS 2185:</strong> कंक्रीट चिनाई इकाइयाँ।</li>
                             <li><strong>IS 1077:</strong> फ्लाई ऐश भवन निर्माण ईंटें।</li>
                             <li><strong>टाटा पिगमेंट्स:</strong> ओरिजिनल टाटा T-130 सिंथेटिक आयरन ऑक्साइड पिगमेंट (100% रंग स्थायित्व)।</li>
@@ -3679,8 +3743,8 @@
                     body.innerHTML = `
                         <p>Our manufactured precast solutions strictly adhere to Indian national construction norms:</p>
                         <ul style="margin-left: 20px; margin-top: 10px; margin-bottom: 10px;">
-                            <li><strong>GSTIN (बिहार सरकार एवं वाणिज्यिक कर पंजीकृत):</strong> 10ABCFV4645B1ZP — 100% कर अनुपालन बी2बी इनवॉइसिंग।</li>
-                            <li><strong>IS 15658:2006:</strong> Precast Concrete Blocks for Paving — dimensional tolerances, compressive strength ratings (M30 to M50), and abrasion resistance.</li>
+                            <li><strong>GSTIN (बिहार सरकार एवं वाणिज्यिक कर पंजीकृत):</strong> 10ABCFV4645B1ZP: 100% कर अनुपालन बी2बी इनवॉइसिंग।</li>
+                            <li><strong>IS 15658:2006:</strong> Precast Concrete Blocks for Paving: dimensional tolerances, compressive strength ratings (M30 to M50), and abrasion resistance.</li>
                             <li><strong>IS 2185:</strong> Concrete Masonry Units (Solid and Hollow Blocks).</li>
                             <li><strong>IS 1077:</strong> Pulverized Fuel Ash (Fly Ash) Building Bricks.</li>
                             <li><strong>Tata Pigments:</strong> Certified Tata T-130 Synthetic Iron Oxide Pigments (100% UV-stable).</li>
