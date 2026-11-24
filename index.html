@@ -1022,6 +1022,94 @@
             color: rgba(255, 255, 255, 0.7);
         }
 
+        
+        /* Demand Showcase Mode on Visualizer Container - Full Visibility, No Inner Scroll */
+        .svg-canvas-container.demand-mode {
+            aspect-ratio: auto !important;
+            min-height: auto !important;
+            height: auto !important;
+            overflow: visible !important;
+            background: transparent !important;
+            box-shadow: none !important;
+            padding: 0 !important;
+        }
+
+        @media (max-width: 768px) {
+            .svg-canvas-container.demand-mode {
+                aspect-ratio: auto !important;
+                min-height: auto !important;
+                height: auto !important;
+                overflow: visible !important;
+                background: transparent !important;
+                box-shadow: none !important;
+                padding: 0 !important;
+            }
+
+            .demand-showcase-card {
+                padding: 24px 16px !important;
+                border-radius: 16px !important;
+                box-sizing: border-box !important;
+                width: 100% !important;
+                max-width: 100% !important;
+                margin: 0 !important;
+            }
+
+            .demand-showcase-card h2 {
+                font-size: 1.35rem !important;
+                line-height: 1.25 !important;
+                margin-bottom: 8px !important;
+            }
+
+            .demand-showcase-card p {
+                font-size: 0.85rem !important;
+                line-height: 1.55 !important;
+                margin-bottom: 16px !important;
+            }
+
+            .demand-badge {
+                font-size: 0.72rem !important;
+                padding: 4px 12px !important;
+                margin-bottom: 12px !important;
+            }
+
+            .demand-chips-grid {
+                grid-template-columns: repeat(2, 1fr) !important;
+                gap: 8px !important;
+                margin-bottom: 18px !important;
+            }
+
+            .demand-chip {
+                padding: 8px 6px !important;
+                border-radius: 8px !important;
+            }
+
+            .demand-chip i {
+                font-size: 1.15rem !important;
+                margin-bottom: 4px !important;
+            }
+
+            .demand-chip strong {
+                font-size: 0.74rem !important;
+            }
+
+            .demand-chip span {
+                font-size: 0.66rem !important;
+            }
+
+            .demand-showcase-card .consultation-actions {
+                width: 100% !important;
+                flex-direction: column !important;
+                gap: 8px !important;
+            }
+
+            .demand-showcase-card .consultation-actions .btn {
+                width: 100% !important;
+                font-size: 0.78rem !important;
+                padding: 10px 8px !important;
+                box-sizing: border-box !important;
+            }
+        }
+    
         /* Info box under visualizer */
         .paver-inspector-card {
             margin-top: 20px;
@@ -2101,7 +2189,7 @@
             <a href="tel:+916206164368" class="btn btn-explain" style="width: 100%;">
                 <i class="fas fa-phone-volume"></i> <span data-i18n="hero_btn_explain">Explain me over a call</span>
             </a>
-            <a href="https://wa.me/916206164368?text=Hello%20Vajra%20Precast%2C%20I%20would%20like%20to%20get%20rates%20for%20precast%20products." target="_blank" class="btn btn-whatsapp" style="width: 100%;">
+            <a href="https://wa.me/916206164368?text=Customer%3A%0AHello%20Vajra%20Precast%2C%20I%20would%20like%20to%20get%20rates%20for%20precast%20products.%0A%0APlease%20Call%20me%0A%E0%A4%95%E0%A5%89%E0%A4%B2%20%E0%A4%95%E0%A4%B0%E0%A5%87%E0%A4%82" target="_blank" class="btn btn-whatsapp" style="width: 100%;">
                 <i class="fab fa-whatsapp"></i> <span data-i18n="mob_drawer_wa">Chat on WhatsApp</span>
             </a>
             <a href="https://www.linkedin.com/company/vajraprecastindustry" target="_blank" rel="noopener noreferrer" class="btn btn-outline" style="width: 100%; color: var(--primary-blue); border-color: var(--primary-blue);">
@@ -2133,7 +2221,7 @@
                 <a href="tel:+916206164368" class="btn btn-explain" title="Have an engineer explain sizes and rates over a phone call">
                     <i class="fas fa-phone-volume"></i> <span data-i18n="hero_btn_explain">Explain me over a call</span>
                 </a>
-                <a href="https://wa.me/916206164368?text=Hello%20Vajra%20Precast%2C%20please%20share%20product%20rates%20and%20specifications." target="_blank" class="btn btn-whatsapp" title="Request catalog and rates on WhatsApp">
+                <a href="https://wa.me/916206164368?text=Customer%3A%0AHello%20Vajra%20Precast%2C%20please%20share%20product%20rates%20and%20specifications.%0A%0APlease%20Call%20me%0A%E0%A4%95%E0%A5%89%E0%A4%B2%20%E0%A4%95%E0%A4%B0%E0%A5%87%E0%A4%82" target="_blank" class="btn btn-whatsapp" title="Request catalog and rates on WhatsApp">
                     <i class="fab fa-whatsapp"></i> <span data-i18n="hero_btn_wa">WhatsApp Quote</span>
                 </a>
                 <a href="#paver-grid" class="btn btn-outline">
@@ -2261,7 +2349,7 @@
                             <a href="tel:+916206164368" class="btn btn-explain">
                                 <i class="fas fa-phone-volume"></i> <span data-i18n="demand_btn_call">Discuss Custom Design (+91 62061 64368)</span>
                             </a>
-                            <a href="https://wa.me/916206164368?text=Hello%20Vajra%20Precast%2C%20I%20have%20a%20custom%20design%20and%20blueprint%20requirement." target="_blank" class="btn btn-whatsapp">
+                            <a href="https://wa.me/916206164368?text=Customer%3A%0AHello%20Vajra%20Precast%2C%20I%20have%20a%20custom%20design%20and%20blueprint%20requirement.%0A%0APlease%20Call%20me%0A%E0%A4%95%E0%A5%89%E0%A4%B2%20%E0%A4%95%E0%A4%B0%E0%A5%87%E0%A4%82" target="_blank" class="btn btn-whatsapp">
                                 <i class="fab fa-whatsapp"></i> <span data-i18n="demand_btn_wa">Send Blueprint on WhatsApp</span>
                             </a>
                         </div>
@@ -2323,7 +2411,7 @@
                         <a href="tel:+916206164368" class="btn btn-explain">
                             <i class="fas fa-phone-volume"></i> <span data-i18n="consult_btn_explain">Explain Over a Call (+91 62061 64368)</span>
                         </a>
-                        <a href="https://wa.me/916206164368?text=Hello%20Vajra%20Precast%2C%20I%20need%20expert%20consultation%20for%20my%20paving%20project." target="_blank" class="btn btn-whatsapp">
+                        <a href="https://wa.me/916206164368?text=Customer%3A%0AHello%20Vajra%20Precast%2C%20I%20need%20expert%20consultation%20for%20my%20paving%20project.%0A%0APlease%20Call%20me%0A%E0%A4%95%E0%A5%89%E0%A4%B2%20%E0%A4%95%E0%A4%B0%E0%A5%87%E0%A4%82" target="_blank" class="btn btn-whatsapp">
                             <i class="fab fa-whatsapp"></i> <span data-i18n="consult_btn_wa">Get Instant Rates on WhatsApp</span>
                         </a>
                     </div>
@@ -2399,7 +2487,7 @@
                         <h3 data-i18n="p1_name">Uni-Paver (I-Shape) Blocks</h3>
                         <p data-i18n="p1_desc">High-traction I-paver blocks with lateral interlock for industrial yards, petrol pumps, driveways, and municipal roads.</p>
                     </div>
-                    <a href="https://wa.me/916206164368?text=Hello%20Vajra%20Precast%2C%20please%20send%20rates%20for%20Uni-Paver%20Blocks." target="_blank" class="prod-btn-action">
+                    <a href="https://wa.me/916206164368?text=Customer%3A%0AHello%20Vajra%20Precast%2C%20please%20send%20rates%20for%20Uni-Paver%20Blocks.%0A%0APlease%20Call%20me%0A%E0%A4%95%E0%A5%89%E0%A4%B2%20%E0%A4%95%E0%A4%B0%E0%A5%87%E0%A4%82" target="_blank" class="prod-btn-action">
                         <i class="fab fa-whatsapp"></i> <span data-i18n="p1_action">Request Rate Sheet</span>
                     </a>
                 </div>
@@ -2412,7 +2500,7 @@
                         <h3 data-i18n="p2_name">Tactile Tiles for the Blind</h3>
                         <p data-i18n="p2_desc">Raised blister hazard & directional guide tiles for airports, metro stations, railway platforms, malls, and public footpaths.</p>
                     </div>
-                    <a href="https://wa.me/916206164368?text=Hello%20Vajra%20Precast%2C%20please%20send%20rates%20for%20Tactile%20Tiles%20for%20the%20Blind." target="_blank" class="prod-btn-action">
+                    <a href="https://wa.me/916206164368?text=Customer%3A%0AHello%20Vajra%20Precast%2C%20please%20send%20rates%20for%20Tactile%20Tiles%20for%20the%20Blind.%0A%0APlease%20Call%20me%0A%E0%A4%95%E0%A5%89%E0%A4%B2%20%E0%A4%95%E0%A4%B0%E0%A5%87%E0%A4%82" target="_blank" class="prod-btn-action">
                         <i class="fab fa-whatsapp"></i> <span data-i18n="p2_action">Request Rate Sheet</span>
                     </a>
                 </div>
@@ -2425,7 +2513,7 @@
                         <h3 data-i18n="p3_name">Tri-Hex Paver Blocks</h3>
                         <p data-i18n="p3_desc">Interlocking 3-hexagon cluster pavers providing high multidirectional load transfer and distinctive architectural paving aesthetics.</p>
                     </div>
-                    <a href="https://wa.me/916206164368?text=Hello%20Vajra%20Precast%2C%20please%20send%20rates%20for%20Tri-Hex%20Paver%20Blocks." target="_blank" class="prod-btn-action">
+                    <a href="https://wa.me/916206164368?text=Customer%3A%0AHello%20Vajra%20Precast%2C%20please%20send%20rates%20for%20Tri-Hex%20Paver%20Blocks.%0A%0APlease%20Call%20me%0A%E0%A4%95%E0%A5%89%E0%A4%B2%20%E0%A4%95%E0%A4%B0%E0%A5%87%E0%A4%82" target="_blank" class="prod-btn-action">
                         <i class="fab fa-whatsapp"></i> <span data-i18n="p3_action">Request Rate Sheet</span>
                     </a>
                 </div>
@@ -2438,7 +2526,7 @@
                         <h3 data-i18n="p4_name">Octagon & Square Tiles</h3>
                         <p data-i18n="p4_desc">Heavy-duty anti-skid embossed octagonal tiles with square junction dots. Ideal for parking areas, commercial plazas, and walkways.</p>
                     </div>
-                    <a href="https://wa.me/916206164368?text=Hello%20Vajra%20Precast%2C%20please%20send%20rates%20for%20Octagon%20and%20Square%20Tiles." target="_blank" class="prod-btn-action">
+                    <a href="https://wa.me/916206164368?text=Customer%3A%0AHello%20Vajra%20Precast%2C%20please%20send%20rates%20for%20Octagon%20and%20Square%20Tiles.%0A%0APlease%20Call%20me%0A%E0%A4%95%E0%A5%89%E0%A4%B2%20%E0%A4%95%E0%A4%B0%E0%A5%87%E0%A4%82" target="_blank" class="prod-btn-action">
                         <i class="fab fa-whatsapp"></i> <span data-i18n="p4_action">Request Rate Sheet</span>
                     </a>
                 </div>
@@ -2451,7 +2539,7 @@
                         <h3 data-i18n="p5_name">Chequered Floor Tiles</h3>
                         <p data-i18n="p5_desc">Grooved waffle and diamond pattern non-slip concrete floor tiles engineered for ramps, basements, and terrace walkways.</p>
                     </div>
-                    <a href="https://wa.me/916206164368?text=Hello%20Vajra%20Precast%2C%20please%20send%20rates%20for%20Chequered%20Floor%20Tiles." target="_blank" class="prod-btn-action">
+                    <a href="https://wa.me/916206164368?text=Customer%3A%0AHello%20Vajra%20Precast%2C%20please%20send%20rates%20for%20Chequered%20Floor%20Tiles.%0A%0APlease%20Call%20me%0A%E0%A4%95%E0%A5%89%E0%A4%B2%20%E0%A4%95%E0%A4%B0%E0%A5%87%E0%A4%82" target="_blank" class="prod-btn-action">
                         <i class="fab fa-whatsapp"></i> <span data-i18n="p5_action">Request Rate Sheet</span>
                     </a>
                 </div>
@@ -2464,7 +2552,7 @@
                         <h3 data-i18n="p6_name">Fly Ash Building Bricks</h3>
                         <p data-i18n="p6_desc">High-density uniform building bricks with sharp edges, superior compressive strength, and minimal mortar absorption.</p>
                     </div>
-                    <a href="https://wa.me/916206164368?text=Hello%20Vajra%20Precast%2C%20please%20send%20rates%20for%20Fly%20Ash%20Bricks." target="_blank" class="prod-btn-action">
+                    <a href="https://wa.me/916206164368?text=Customer%3A%0AHello%20Vajra%20Precast%2C%20please%20send%20rates%20for%20Fly%20Ash%20Bricks.%0A%0APlease%20Call%20me%0A%E0%A4%95%E0%A5%89%E0%A4%B2%20%E0%A4%95%E0%A4%B0%E0%A5%87%E0%A4%82" target="_blank" class="prod-btn-action">
                         <i class="fab fa-whatsapp"></i> <span data-i18n="p6_action">Request Rate Sheet</span>
                     </a>
                 </div>
@@ -2477,7 +2565,7 @@
                         <h3 data-i18n="p7_name">RCC Precast Boundary Walls</h3>
                         <p data-i18n="p7_desc">Factory-cast interlocking wall panels and posts. 3x faster installation and 30% more economical than brick boundary walls.</p>
                     </div>
-                    <a href="https://wa.me/916206164368?text=Hello%20Vajra%20Precast%2C%20please%20send%20rates%20for%20RCC%20Precast%20Boundary%20Walls." target="_blank" class="prod-btn-action">
+                    <a href="https://wa.me/916206164368?text=Customer%3A%0AHello%20Vajra%20Precast%2C%20please%20send%20rates%20for%20RCC%20Precast%20Boundary%20Walls.%0A%0APlease%20Call%20me%0A%E0%A4%95%E0%A5%89%E0%A4%B2%20%E0%A4%95%E0%A4%B0%E0%A5%87%E0%A4%82" target="_blank" class="prod-btn-action">
                         <i class="fab fa-whatsapp"></i> <span data-i18n="p7_action">Request Rate Sheet</span>
                     </a>
                 </div>
@@ -2490,7 +2578,7 @@
                         <h3 data-i18n="p8_name">Custom Precast on Demand</h3>
                         <p data-i18n="p8_desc">Custom molds, any geometric pattern, any Tata Pigments color shade, any compressive strength (M30-M60+), and any thickness.</p>
                     </div>
-                    <a href="https://wa.me/916206164368?text=Hello%20Vajra%20Precast%2C%20I%20have%20a%20custom%20precast%20concrete%20requirement." target="_blank" class="prod-btn-action">
+                    <a href="https://wa.me/916206164368?text=Customer%3A%0AHello%20Vajra%20Precast%2C%20I%20have%20a%20custom%20precast%20concrete%20requirement.%0A%0APlease%20Call%20me%0A%E0%A4%95%E0%A5%89%E0%A4%B2%20%E0%A4%95%E0%A4%B0%E0%A5%87%E0%A4%82" target="_blank" class="prod-btn-action">
                         <i class="fab fa-whatsapp"></i> <span data-i18n="p8_action">Discuss Custom Order</span>
                     </a>
                 </div>
@@ -2610,7 +2698,7 @@
                     <!-- Social Action Buttons -->
                     <div class="social-buttons-wrap">
                         <a href="tel:+916206164368" class="social-btn phone" title="Call Customer Support"><i class="fas fa-phone-alt"></i></a>
-                        <a href="https://wa.me/916206164368" target="_blank" rel="noopener noreferrer" class="social-btn whatsapp" title="Chat on WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                        <a href="https://wa.me/916206164368?text=Customer%3A%0AHello%20Vajra%20Precast%2C%20I%20would%20like%20to%20get%20rates%20for%20precast%20products.%0A%0APlease%20Call%20me%0A%E0%A4%95%E0%A5%89%E0%A4%B2%20%E0%A4%95%E0%A4%B0%E0%A5%87%E0%A4%82" target="_blank" rel="noopener noreferrer" class="social-btn whatsapp" title="Chat on WhatsApp"><i class="fab fa-whatsapp"></i></a>
                         <a href="https://www.linkedin.com/company/vajraprecastindustry" target="_blank" rel="noopener noreferrer" class="social-btn linkedin" title="Follow on LinkedIn"><i class="fab fa-linkedin-in"></i></a>
                     </div>
                 </div>
@@ -2670,7 +2758,7 @@
     </footer>
 
     <!-- Floating WhatsApp Button -->
-    <a href="https://wa.me/916206164368?text=Hello%20Vajra%20Precast%2C%20I%20am%20interested%20in%20paver%20blocks%20and%20tiles." class="whatsapp-float" target="_blank" rel="noopener noreferrer" aria-label="Chat with Vajra Precast on WhatsApp">
+    <a href="https://wa.me/916206164368?text=Customer%3A%0AHello%20Vajra%20Precast%2C%20I%20am%20interested%20in%20paver%20blocks%20and%20tiles.%0A%0APlease%20Call%20me%0A%E0%A4%95%E0%A5%89%E0%A4%B2%20%E0%A4%95%E0%A4%B0%E0%A5%87%E0%A4%82" class="whatsapp-float" target="_blank" rel="noopener noreferrer" aria-label="Chat with Vajra Precast on WhatsApp">
         <i class="fab fa-whatsapp"></i>
     </a>
 
@@ -2684,7 +2772,7 @@
             <i class="fas fa-phone-volume"></i>
             <span data-i18n="mob_explain">Explain</span>
         </a>
-        <a href="https://wa.me/916206164368?text=Hello%20Vajra%20Precast%2C%20I%20would%20like%20to%20get%20rates%20for%20precast%20products." target="_blank" rel="noopener noreferrer" class="mobile-action-btn wa-btn">
+        <a href="https://wa.me/916206164368?text=Customer%3A%0AHello%20Vajra%20Precast%2C%20I%20would%20like%20to%20get%20rates%20for%20precast%20products.%0A%0APlease%20Call%20me%0A%E0%A4%95%E0%A5%89%E0%A4%B2%20%E0%A4%95%E0%A4%B0%E0%A5%87%E0%A4%82" target="_blank" rel="noopener noreferrer" class="mobile-action-btn wa-btn">
             <i class="fab fa-whatsapp"></i>
             <span data-i18n="mob_wa">WhatsApp</span>
         </a>
@@ -3271,11 +3359,13 @@
             const demandCard = document.getElementById('demand-card');
             const waveWrap = document.getElementById('wave-control-wrap');
 
+            const visualizerContainer = document.getElementById('visualizer-container');
             if (productKey === 'more') {
                 // Show "Design as per demand" card
                 svgCanvas.style.display = 'none';
                 demandCard.style.display = 'block';
                 waveWrap.style.display = 'none';
+                if (visualizerContainer) visualizerContainer.classList.add('demand-mode');
 
                 const nameEl = document.getElementById('inspector-name');
                 const descEl = document.getElementById('inspector-desc');
@@ -3290,6 +3380,7 @@
                 svgCanvas.style.display = 'inline-block';
                 demandCard.style.display = 'none';
                 waveWrap.style.display = 'block';
+                if (visualizerContainer) visualizerContainer.classList.remove('demand-mode');
                 renderSelectedProductGrid(productKey);
                 updateVisualizerInspectorText();
             }
