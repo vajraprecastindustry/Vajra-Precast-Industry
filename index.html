@@ -128,10 +128,10 @@
             background-color: var(--bg-light);
             overflow-x: hidden;
             line-height: 1.6;
-            padding-bottom: 74px; /* Space for mobile sticky bottom dock */
+            padding-bottom: calc(84px + env(safe-area-inset-bottom, 0px)); /* Space for floating bottom dock */
         }
 
-        @media (min-width: 769px) {
+        @media (min-width: 1025px) {
             body {
                 padding-bottom: 0;
             }
@@ -1744,16 +1744,16 @@
         /* --- Floating WhatsApp Button --- */
         .whatsapp-float {
             position: fixed;
-            width: 56px;
-            height: 56px;
-            bottom: 82px;
+            width: 54px;
+            height: 54px;
+            bottom: calc(86px + env(safe-area-inset-bottom, 0px));
             right: 18px;
             background-color: var(--whatsapp-green);
             color: #FFFFFF;
             border-radius: 50%;
             text-align: center;
-            font-size: 32px;
-            box-shadow: 0 4px 18px rgba(37, 211, 102, 0.45);
+            font-size: 30px;
+            box-shadow: 0 6px 22px rgba(37, 211, 102, 0.45);
             z-index: 990;
             display: flex;
             align-items: center;
@@ -1763,7 +1763,7 @@
             animation: pulse 2s infinite;
         }
 
-        @media (min-width: 769px) {
+        @media (min-width: 1025px) {
             .whatsapp-float {
                 bottom: 30px;
                 right: 30px;
@@ -1778,26 +1778,44 @@
             transform: scale(1.1);
         }
 
-        /* --- Mobile Bottom Sticky Action Dock (< 768px) --- */
+        /* --- Apple iOS Style Floating Translucent Dock (Phone, Tablet, Dual-Screen) --- */
         .mobile-sticky-bar {
             position: fixed;
-            bottom: 0;
-            left: 0;
-            right: 0;
-            height: 62px;
-            background: #FFFFFF;
-            border-top: 2px solid var(--border-color);
+            bottom: calc(14px + env(safe-area-inset-bottom, 0px));
+            left: 50%;
+            transform: translateX(-50%);
+            width: calc(100% - 24px);
+            max-width: 420px;
+            height: 60px;
+            background: rgba(255, 255, 255, 0.82);
+            backdrop-filter: blur(24px) saturate(190%);
+            -webkit-backdrop-filter: blur(24px) saturate(190%);
+            border: 1px solid rgba(255, 255, 255, 0.85);
+            border-radius: 36px;
             display: flex;
             align-items: center;
             justify-content: space-around;
-            z-index: 980;
-            box-shadow: 0 -3px 12px rgba(0, 0, 0, 0.08);
-            padding: 0 4px;
+            z-index: 995;
+            box-shadow: 0 16px 38px rgba(7, 37, 69, 0.16), 
+                        0 3px 10px rgba(0, 0, 0, 0.05), 
+                        0 0 0 1px rgba(0, 0, 0, 0.06), 
+                        inset 0 1px 1px rgba(255, 255, 255, 0.95);
+            padding: 3px 6px;
+            box-sizing: border-box;
+            transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
         }
 
-        @media (min-width: 769px) {
+        @media (min-width: 1025px) {
             .mobile-sticky-bar {
                 display: none;
+            }
+        }
+
+        @media (max-width: 360px) {
+            .mobile-sticky-bar {
+                width: calc(100% - 14px);
+                padding: 3px 2px;
+                height: 56px;
             }
         }
 
@@ -1808,18 +1826,37 @@
             align-items: center;
             justify-content: center;
             text-decoration: none;
-            color: var(--text-dark);
-            font-size: 0.65rem;
+            font-size: 0.63rem;
             font-family: 'Montserrat', 'Noto Sans Devanagari', sans-serif;
             font-weight: 700;
             gap: 2px;
             height: 100%;
             min-width: 0;
-            padding: 4px 2px;
+            padding: 3px 1px;
+            border-radius: 24px;
+            cursor: pointer;
+            -webkit-tap-highlight-color: transparent;
+            user-select: none;
+            -webkit-user-select: none;
+            transition: transform 0.15s ease, background-color 0.15s ease;
+        }
+
+        .mobile-action-btn:active {
+            transform: scale(0.92);
+            background: rgba(0, 0, 0, 0.06);
         }
 
         .mobile-action-btn i {
             font-size: 1.15rem;
+            height: 22px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: transform 0.2s ease;
+        }
+
+        .mobile-action-btn:hover i {
+            transform: translateY(-1px);
         }
 
         .mobile-action-btn span {
@@ -1827,25 +1864,38 @@
             overflow: hidden;
             text-overflow: ellipsis;
             max-width: 100%;
+            letter-spacing: -0.2px;
+            color: #1E293B;
+            line-height: 1.1;
         }
 
-        .mobile-action-btn.call-btn {
+        @media (max-width: 360px) {
+            .mobile-action-btn span {
+                font-size: 0.58rem;
+            }
+            .mobile-action-btn i {
+                font-size: 1.05rem;
+                height: 20px;
+            }
+        }
+
+        .mobile-action-btn.call-btn i {
             color: var(--primary-blue);
         }
 
-        .mobile-action-btn.explain-btn {
+        .mobile-action-btn.explain-btn i {
             color: #14532D;
         }
 
-        .mobile-action-btn.wa-btn {
+        .mobile-action-btn.wa-btn i {
             color: var(--whatsapp-green);
         }
 
-        .mobile-action-btn.google-btn {
+        .mobile-action-btn.google-btn i {
             color: #EA4335;
         }
 
-        .mobile-action-btn.erp-btn {
+        .mobile-action-btn.erp-btn i {
             color: #B45309;
         }
 
@@ -2063,19 +2113,15 @@
 
         /* Mobile Sticky Dock Safe Areas */
         @media (max-width: 768px) {
-            .mobile-sticky-bar {
-                height: calc(58px + env(safe-area-inset-bottom, 0px));
-                padding-bottom: env(safe-area-inset-bottom, 0px);
-            }
             .whatsapp-float {
-                bottom: calc(72px + env(safe-area-inset-bottom, 0px));
-                right: 16px;
-                width: 52px;
-                height: 52px;
-                font-size: 28px;
+                bottom: calc(84px + env(safe-area-inset-bottom, 0px));
+                right: 14px;
+                width: 50px;
+                height: 50px;
+                font-size: 27px;
             }
             body {
-                padding-bottom: calc(68px + env(safe-area-inset-bottom, 0px));
+                padding-bottom: calc(84px + env(safe-area-inset-bottom, 0px));
             }
         }
 
@@ -2765,25 +2811,25 @@
         <i class="fab fa-whatsapp"></i>
     </a>
 
-    <!-- Mobile-Focused Sticky Bottom Action Dock (< 768px) -->
-    <div class="mobile-sticky-bar">
-        <a href="tel:+916206164368" class="mobile-action-btn call-btn">
+    <!-- Apple iOS Style Floating Translucent Dock (Phone, Tablet, Dual-Screen) -->
+    <div class="mobile-sticky-bar" role="navigation" aria-label="Mobile Bottom Navigation">
+        <a href="tel:+916206164368" class="mobile-action-btn call-btn" title="Call Customer Support (+91 62061 64368)" aria-label="Call Customer Support">
             <i class="fas fa-headset"></i>
             <span data-i18n="mob_call">Support</span>
         </a>
-        <a href="tel:+916206164368" class="mobile-action-btn explain-btn">
+        <a href="tel:+916206164368" class="mobile-action-btn explain-btn" title="Explain Products Over a Call" aria-label="Explain Products Over a Call">
             <i class="fas fa-phone-volume"></i>
             <span data-i18n="mob_explain">Explain</span>
         </a>
-        <a href="https://wa.me/916206164368?text=Customer%3A%0AHello%20Vajra%20Precast%2C%20I%20would%20like%20to%20get%20rates%20for%20precast%20products.%0A%0APlease%20Call%20me%0A%E0%A4%95%E0%A5%89%E0%A4%B2%20%E0%A4%95%E0%A4%B0%E0%A5%87%E0%A4%82" target="_blank" rel="noopener noreferrer" class="mobile-action-btn wa-btn">
+        <a href="https://wa.me/916206164368?text=Customer%3A%0AHello%20Vajra%20Precast%2C%20I%20would%20like%20to%20get%20rates%20for%20precast%20products.%0A%0APlease%20Call%20me%0A%E0%A4%95%E0%A5%89%E0%A4%B2%20%E0%A4%95%E0%A4%B0%E0%A5%87%E0%A4%82" target="_blank" rel="noopener noreferrer" class="mobile-action-btn wa-btn" title="Send WhatsApp Inquiry" aria-label="WhatsApp Inquiry">
             <i class="fab fa-whatsapp"></i>
             <span data-i18n="mob_wa">WhatsApp</span>
         </a>
-        <a href="https://share.google/hUYS0YOORTFmH1Z55" target="_blank" rel="noopener noreferrer" class="mobile-action-btn google-btn" title="View Vajra Precast on Google">
+        <a href="https://share.google/hUYS0YOORTFmH1Z55" target="_blank" rel="noopener noreferrer" class="mobile-action-btn google-btn" title="View Vajra Precast on Google Maps & Reviews" aria-label="Google Business Profile">
             <i class="fab fa-google"></i>
             <span data-i18n="mob_google">Google</span>
         </a>
-        <a href="https://vajra-precast-erp.pages.dev/login" target="_blank" rel="noopener noreferrer" class="mobile-action-btn erp-btn" title="Vajra ERP Employee Login">
+        <a href="https://vajra-precast-erp.pages.dev/login" target="_blank" rel="noopener noreferrer" class="mobile-action-btn erp-btn" title="Vajra ERP Employee Login" aria-label="Employee ERP Portal Login">
             <i class="fas fa-user-lock"></i>
             <span data-i18n="mob_employee">Employee</span>
         </a>
@@ -3220,7 +3266,7 @@
 
             // Mobile Dock
             "mob_call": { "en": "Support", "hi": "सपोर्ट" },
-            "mob_explain": { "en": "Explain", "hi": "फ़ोन पर समझें" },
+            "mob_explain": { "en": "Explain", "hi": "समझाएं" },
             "mob_wa": { "en": "WhatsApp", "hi": "व्हाट्सएप" },
             "mob_google": { "en": "Google", "hi": "गूगल" },
             "mob_employee": { "en": "Employee", "hi": "कर्मचारी" }
