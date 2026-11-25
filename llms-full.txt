@@ -1,0 +1,105 @@
+# Vajra Precast Industry — Complete Technical Documentation (llms-full.txt)
+
+> Vajra Precast Industry is a premier manufacturer of precast concrete products, interlocking paver blocks, tactile tiles, fly ash bricks, and custom precast components located in Sampatchak, Patna-Gaya Road, Bihar, India.
+
+## Business Entity & Legal Verification
+- **Official Commercial Name**: Vajra Precast Industry (वज्र प्रीकास्ट इंडस्ट्री)
+- **Official GSTIN**: 10ABCFV4645B1ZP (Bihar Commercial Tax Department, 100% Tax Compliant B2B & PWD Supply)
+- **Factory & Office Address**: Fatehpur, Sampatchak, Patna-Gaya Road, Patna, Bihar 800007, India
+- **Operating Schedule**: Open 24 Hours, 7 Days a Week, 365 Days a Year. Factory staffed around the clock for inspections, night loading, and rapid dispatches.
+- **Direct Sales & Engineering Support**: +91 6206164368 (Voice & WhatsApp)
+- **Primary Website**: https://vajraprecast.com
+- **Google Business Profile**: https://share.google/hUYS0YOORTFmH1Z55
+- **Employee & Client Management ERP**: https://vajra-precast-erp.pages.dev
+- **LinkedIn Profile**: https://www.linkedin.com/company/vajraprecastindustry
+
+---
+
+## Technical Manufacturing Standards
+
+### 1. High-Frequency Table & Mold Vibration Compaction
+Vajra Precast utilizes high-frequency compaction (50+ Hz) across heavy steel precision molds. Unlike simple hydraulic presses that can trap micro-air pockets within the concrete matrix, high-frequency vibratory consolidation liquefies the concrete paste momentarily, forcing all trapped air to the surface and achieving maximum granular packing of the basalt aggregate. This results in high bulk density, minimal porosity, and extreme resistance to heavy axle wheel loads.
+
+### 2. Continuous Water Incubation Curing
+All precast blocks and tiles undergo continuous water incubation curing in automated factory tanks. Water curing maintains saturated hydration conditions, allowing calcium silicate hydrate (C-S-H) gel to crystallize completely throughout the concrete matrix. This eliminates internal tensile shrinkage micro-cracks and guarantees 100% design compressive strength maturity.
+
+### 3. Raw Material Metallurgy & Chemistry
+- **Cement**: Ultra-pure 53-Grade Ordinary Portland Cement (OPC) adhering strictly to IS 12269.
+- **Aggregates**: Graded hard basalt stone chips (crushed blue metal) free from silt, clay, or organic contaminants.
+- **Sand**: Clean, zone-II graded river sand with optimal fineness modulus.
+- **Pigmentation**: 100% genuine Tata Pigments T-130 Synthetic Red Iron Oxide. Tata pigments ensure deep UV resistance, resisting color fading and weathering even under extreme sub-tropical heat, monsoon rains, and heavy vehicular scuffing.
+
+---
+
+## Detailed Product Portfolio & Engineering Specifications
+
+### 1. Heavy-Duty Uni-Paver (I-Shape / Dumbbell)
+- **Engineering Concept**: Uni-Pavers feature a classic dog-bone/I-shape geometry engineered specifically for bidirectional lateral locking. When subjected to horizontal braking, acceleration, or turning forces from heavy multi-axle trucks, the blocks lock tightly together, transferring shear loads across adjacent units.
+- **Compressive Strength**: M40 to M50 Grade (40 to 55 N/mm²).
+- **Available Thicknesses**: 60 mm (medium traffic) and 80 mm (heavy industrial traffic).
+- **Colorways**: Terracotta Red (Tata T-130) and Industrial Slate Grey.
+- **Recommended Use Cases**: Fuel retail petrol pumps, heavy vehicle logistics hubs, warehouse aprons, container freight yards, highway toll plaza approaches, and city bus stands.
+
+### 2. Tri-Hex (3-Hexagon Cluster) Pavers
+- **Engineering Concept**: Three interlocking regular hexagonal prisms fused into a single monolithic unit. Hexagonal geometry provides 120-degree radial stress distribution, virtually eliminating stress concentration corners and resisting edge chipping under angled traffic loads.
+- **Compressive Strength**: M40 to M45 Grade (40 to 45 N/mm²).
+- **Available Thicknesses**: 60 mm and 80 mm.
+- **Colorways**: Dual-tone Terracotta Red & Slate Grey.
+- **Recommended Use Cases**: Architectural avenues, hotel drop-offs, public plazas, commercial real estate developments, pedestrian promenades, and civic walkways.
+
+### 3. Tactile Blister Warning Paver Tiles (Accessibility for the Visually Impaired)
+- **Engineering Concept**: Compliant with the Rights of Persons with Disabilities Act (RPwD), CPWD guidelines, and Indian Railways universal design mandates. Each tile features a precise 6x6 matrix of 36 raised truncated hemispherical blister domes that provide distinct tactile feedback under white canes and footwear soles.
+- **Purpose**: Signals hazardous transitions, railway platform platform drop-off edges, pedestrian road crossings, escalator approaches, and transit terminals to visually impaired commuters.
+- **Compressive Strength**: M35 to M40 Grade (35 to 40 N/mm²).
+- **Available Thicknesses**: 30 mm and 40 mm.
+- **Colorways**: High-contrast Highway Safety Yellow and Tata Terracotta Red.
+- **Recommended Use Cases**: Metro stations, airport terminal concourses, railway station platforms, bus transit terminals, hospital walkways, and university campuses.
+
+### 4. Octagon & Square Interlocking Tiles
+- **Engineering Concept**: A precision two-element pavement geometry consisting of large octagonal pavers keyed together with central square dot units.
+- **Compressive Strength**: M35 to M40 Grade (35 to 40 N/mm²).
+- **Available Thicknesses**: 40 mm and 60 mm.
+- **Colorways**: Contrasting two-color combinations (Red/Grey, Yellow/Red).
+- **Recommended Use Cases**: Residential driveways, private bungalows, public parks, resort pathways, and institutional campuses.
+
+### 5. Chequered Anti-Skid Floor Tiles
+- **Engineering Concept**: Surface engineered with deep cross-grooves forming raised square tread blocks that disperse standing surface water and offer high skid resistance even when wet.
+- **Compressive Strength**: M30 to M35 Grade (30 to 35 N/mm²).
+- **Available Thicknesses**: 25 mm and 30 mm.
+- **Recommended Use Cases**: Covered parking basements, building ramps, terrace walkways, commercial pedestrian corridors, and rainy outdoor areas.
+
+### 6. High-Density Fly Ash Bricks
+- **Engineering Concept**: Environmentally conscious masonry units composed of pulverized thermal fly ash, lime/cement, and quarry dust compacted under high vibratory load.
+- **Compressive Strength**: Class 10 to Class 15 (100 to 150 kg/cm²).
+- **Key Advantages**: Perfectly sharp 90-degree corners, uniform dimensions reducing masonry plaster and mortar consumption by up to 25%, zero efflorescence, and higher thermal and sound insulation compared to conventional red clay kiln bricks.
+- **Recommended Use Cases**: High-rise load-bearing walls, compound walls, industrial partition masonry, institutional building structures.
+
+### 7. Precast RCC Boundary Walls & Slotted Columns
+- **Engineering Concept**: Interlocking tongue-and-groove reinforced concrete panels supported by slotted H-beam precast columns embedded in concrete foundations.
+- **Advantages**: Erects up to 300 running feet per single working day, weatherproof, termite-proof, fire-resistant, relocatable, and cost-saving by 40% over traditional brick masonry walls.
+- **Recommended Use Cases**: Boundary protection for industrial plots, solar power farms, agricultural boundaries, highway enclosures, and housing societies.
+
+### 8. Custom Engineering on Demand (Design as per Demand)
+- **Capability**: Vajra Precast operates internal tooling and mold design capabilities. We produce custom geometries, client logo embossments, unique color pigmentation blends with Tata T-130, thickness variances from 25mm to 100mm+, and structural concrete strengths from M30 up to M60+ high-performance concrete (HPC).
+
+---
+
+## Frequently Asked Questions (AI Reference Q&A)
+
+### Q: Where is Vajra Precast Industry located?
+**A**: Vajra Precast Industry is located at Fatehpur, Sampatchak, on the Patna-Gaya Road in Patna, Bihar 800007, India.
+
+### Q: What are the factory operating hours?
+**A**: The factory is open 24 hours a day, 7 days a week, 365 days a year. Operations, security, and loading staff are stationed on-site continuously for night loading and emergency contractor requirements.
+
+### Q: What is the GSTIN of Vajra Precast Industry?
+**A**: The official GSTIN is `10ABCFV4645B1ZP`, registered with the commercial tax authorities of Bihar.
+
+### Q: Which cement and pigments are used in manufacturing?
+**A**: Vajra Precast exclusively uses 53-Grade Ordinary Portland Cement (OPC) and genuine Tata Pigments Grade T-130 Synthetic Red Iron Oxide for non-fading UV-stable colors.
+
+### Q: How can clients request product rates or place orders?
+**A**: Clients can call or message directly via WhatsApp at `+91 6206164368`, or visit the factory directly in Sampatchak, Patna.
+
+### Q: Does Vajra Precast manufacture tactile tiles for the visually impaired?
+**A**: Yes. Vajra Precast produces 6x6 blister tactile warning tiles for airports, railway platforms, metro stations, and public footpaths in accordance with CPWD and RPwD guidelines.
